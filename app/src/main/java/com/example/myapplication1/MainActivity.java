@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     static Button gesturesButton;
     static Button fragmentsButton;
     static Button autoCompleteButton;
+    static Button timePickerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         addWebGesturesButtonListener();
         addFragmentsButtonListener();
         addAutoCompleteButtonListener();
+        addTimePickerButtonListener();
 
     }
 
@@ -241,6 +243,19 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent("com.example.myapplication1.AutoCompleteActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void addTimePickerButtonListener (){
+        timePickerButton = (Button)findViewById(R.id.button_timePicker);
+        timePickerButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.example.myapplication1.TimePickerActivity");
                         startActivity(intent);
                     }
                 }

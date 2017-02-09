@@ -80,7 +80,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TimePickerActivity"
+            android:label="Time Picker Activity">
+            <intent-filter>
+                <action android:name="com.example.myapplication1.TimePickerActivity" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
     </application>
 
