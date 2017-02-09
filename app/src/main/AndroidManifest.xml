@@ -71,6 +71,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AutoCompleteActivity"
+            android:label="AutoComplete Activity">
+            <intent-filter>
+                <action android:name="com.example.myapplication1.AutoCompleteActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 

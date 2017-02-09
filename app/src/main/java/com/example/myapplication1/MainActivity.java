@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     static Button webViewButton;
     static Button gesturesButton;
     static Button fragmentsButton;
+    static Button autoCompleteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
         addSeekBarButtonListener();
         addWebViewButtonListener();
         addWebGesturesButtonListener();
-        addWebFragmentsButtonListener();
+        addFragmentsButtonListener();
+        addAutoCompleteButtonListener();
 
     }
 
@@ -219,13 +221,26 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    public void addWebFragmentsButtonListener(){
+    public void addFragmentsButtonListener(){
         fragmentsButton = (Button)findViewById(R.id.button_fragments);
         fragmentsButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent("com.example.myapplication1.FragmentsActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void addAutoCompleteButtonListener(){
+        autoCompleteButton = (Button)findViewById(R.id.button_autoComplete);
+        autoCompleteButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.example.myapplication1.AutoCompleteActivity");
                         startActivity(intent);
                     }
                 }
