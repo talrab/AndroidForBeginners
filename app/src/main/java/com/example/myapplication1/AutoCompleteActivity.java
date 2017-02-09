@@ -27,7 +27,6 @@ public class AutoCompleteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_auto_complete);
 
         acTextView = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView);
-        //ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.select_dialog_item,countries);
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.select_dialog_item,countries);
 
         acTextView.setThreshold(1);//waiting for 1 charecters to see the auto compete hints
