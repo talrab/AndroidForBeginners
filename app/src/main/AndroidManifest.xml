@@ -90,10 +90,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TimePickerDialogActivity"
-            android:label="Time Picker Dialog Activity">
+            android:name=".TimeAndDatePickerDialogActivity"
+            android:label="Time And Date Picker Dialog Activity">
             <intent-filter>
-                <action android:name="com.example.myapplication1.TimePickerDialogActivity" />
+                <action android:name="com.example.myapplication1.TimeAndDatePickerDialogActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

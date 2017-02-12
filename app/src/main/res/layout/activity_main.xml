@@ -167,14 +167,14 @@
         android:textSize="10sp" />
 
     <Button
-        android:text="TimePicker dialog"
+        android:text="TimeAndDate Picker dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_timePickerDialog"
+        android:id="@+id/button_timeAndDatePickerDialog"
         android:textSize="10sp"
         android:layout_alignBottom="@+id/button_gestures"
-        android:layout_alignStart="@+id/button_timePicker"
-        android:layout_alignEnd="@+id/button_timePicker" />
+        android:layout_alignEnd="@+id/button_timePicker"
+        android:layout_alignStart="@+id/button_autoComplete" />
 
     <Button
         android:text="Fragments"

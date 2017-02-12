@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     static Button fragmentsButton;
     static Button autoCompleteButton;
     static Button timePickerButton;
-    static Button timePickerDialogButton;
+    static Button timeAndDatePickerDialogButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         addFragmentsButtonListener();
         addAutoCompleteButtonListener();
         addTimePickerButtonListener();
-        addTimePickerDialogButtonListener();
+        addTimeAndDatePickerDialogButtonListener();
 
     }
 
@@ -264,13 +264,13 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    public void addTimePickerDialogButtonListener(){
-        timePickerDialogButton = (Button)findViewById(R.id.button_timePickerDialog);
-        timePickerDialogButton.setOnClickListener(
+    public void addTimeAndDatePickerDialogButtonListener(){
+        timeAndDatePickerDialogButton = (Button)findViewById(R.id.button_timeAndDatePickerDialog);
+        timeAndDatePickerDialogButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent("com.example.myapplication1.TimePickerDialogActivity");
+                        Intent intent = new Intent("com.example.myapplication1.TimeAndDatePickerDialogActivity");
                         startActivity(intent);
                     }
                 }
