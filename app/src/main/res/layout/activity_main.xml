@@ -121,32 +121,13 @@
         android:id="@+id/alertButton" />
 
     <Button
-        android:text="Open 2nd Activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/openSecondActivity_button"
-        android:textSize="12sp"
-        android:layout_below="@+id/rating_button"
-        android:layout_alignStart="@+id/rating_button"
-        android:layout_marginTop="11dp" />
-
-    <Button
         android:text="SeekBar Activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_seekBar"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:layout_below="@+id/openSecondActivity_button"
         android:layout_alignStart="@+id/openSecondActivity_button" />
-
-    <Button
-        android:text="WebView Activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_webView"
-        android:textSize="12sp"
-        android:layout_below="@+id/button_seekBar"
-        android:layout_alignStart="@+id/button_seekBar" />
 
     <RatingBar
         android:layout_width="wrap_content"
@@ -165,25 +146,16 @@
         android:layout_below="@+id/button_webView"
         android:layout_alignStart="@+id/button_webView"
         android:id="@+id/button_gestures"
-        android:textSize="12sp" />
+        android:textSize="10sp" />
 
     <Button
-        android:text="Button"
+        android:text="Rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/rating_button"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/passwordText" />
-
-    <Button
-        android:text="Fragments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_seekBar"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button_fragments"
-        android:textSize="12sp"
-        android:minWidth="80dp" />
+        android:layout_toEndOf="@+id/passwordText"
+        android:textSize="12sp" />
 
     <Button
         android:text="AutoComplete"
@@ -195,12 +167,50 @@
         android:textSize="10sp" />
 
     <Button
+        android:text="TimePicker dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_timePickerDialog"
+        android:textSize="10sp"
+        android:layout_alignBottom="@+id/button_gestures"
+        android:layout_alignStart="@+id/button_timePicker"
+        android:layout_alignEnd="@+id/button_timePicker" />
+
+    <Button
+        android:text="Fragments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_fragments"
+        android:textSize="10sp"
+        android:minWidth="80dp"
+        android:layout_below="@+id/rating_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Open 2nd Activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/openSecondActivity_button"
+        android:textSize="10sp"
+        android:layout_below="@+id/rating_button"
+        android:layout_alignParentEnd="true" />
+
+    <Button
         android:text="TimePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:id="@+id/button_timePicker"
-        android:layout_above="@+id/button_gestures"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        android:layout_below="@+id/button_autoComplete"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="WebView Activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_webView"
+        android:textSize="10sp"
+        android:layout_below="@+id/button_seekBar"
+        android:layout_alignStart="@+id/button_seekBar" />
 
 </RelativeLayout>
