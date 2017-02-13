@@ -222,4 +222,13 @@
         android:layout_below="@+id/ratingBar"
         android:layout_alignStart="@+id/alertButton" />
 
+    <Button
+        android:text="Services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_services"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/button_fragments" />
+
 </RelativeLayout>

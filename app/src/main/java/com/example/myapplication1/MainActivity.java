@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     static Button timePickerButton;
     static Button timeAndDatePickerDialogButton;
     static Button notifyMeButton;
+    static Button servicesButton;
 
 
     @Override
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         addTimePickerButtonListener();
         addTimeAndDatePickerDialogButtonListener();
         addNotifyMeButtonListener();
+        addServicesButtonListener();
 
     }
 
@@ -337,6 +339,19 @@ public class MainActivity extends AppCompatActivity {
                         noti.flags = Notification.FLAG_AUTO_CANCEL;
                         NotificationManager nm = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
                         nm.notify(0,noti);
+                    }
+                }
+        );
+    }
+
+    public void addServicesButtonListener(){
+        servicesButton = (Button)findViewById(R.id.button_services);
+        servicesButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.example.myapplication1.ServicesActivity");
+                        startActivity(intent);
                     }
                 }
         );
