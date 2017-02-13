@@ -110,7 +110,11 @@
 
         <service
             android:name=".TheService"
-            android:exported="false">   <!-- this means otyher apps will not be able to use this service -->
+            android:exported="false">   <!-- this means other apps will not be able to use this service -->
+        </service>
+        <service
+            android:name=".TheIntentService"
+            android:exported="false">   <!-- this means other apps will not be able to use this service -->
         </service>
     </application>
 

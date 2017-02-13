@@ -21,4 +21,14 @@ public class ServicesActivity extends AppCompatActivity {
         Intent intent = new Intent(this,TheService.class);
         stopService(intent);
     }
+
+    public void myStartIntentService (View view){
+        Intent intent = new Intent(this,TheIntentService.class);
+        startService(intent);
+    }
+    public void myStopIntentService (View view){
+        Intent intent = new Intent(this,TheIntentService.class);
+        stopService(intent);
+    }
+
 }
