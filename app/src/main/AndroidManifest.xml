@@ -110,12 +110,36 @@
 
         <service
             android:name=".TheService"
-            android:exported="false">   <!-- this means other apps will not be able to use this service -->
+            android:exported="false"> <!-- this means other apps will not be able to use this service -->
         </service>
         <service
             android:name=".TheIntentService"
-            android:exported="false">   <!-- this means other apps will not be able to use this service -->
+            android:exported="false"> <!-- this means other apps will not be able to use this service -->
         </service>
+        <service
+            android:name=".MyBoundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".InternalStorageActivity"
+            android:label="Internal Storage">
+            <intent-filter>
+                <action android:name="com.example.myapplication1.InternalStorageActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DbActivity"
+            android:label="DB">
+            <intent-filter>
+                <action android:name="com.example.myapplication1.DbActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

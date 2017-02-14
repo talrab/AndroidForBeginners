@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     static Button timeAndDatePickerDialogButton;
     static Button notifyMeButton;
     static Button servicesButton;
+    static Button internalStorageButton;
+    static Button dbButton;
 
 
     @Override
@@ -79,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         addTimeAndDatePickerDialogButtonListener();
         addNotifyMeButtonListener();
         addServicesButtonListener();
+        addInternalStorageButtonListener();
+        addDbButtonListener();
 
     }
 
@@ -351,6 +355,32 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent("com.example.myapplication1.ServicesActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void addInternalStorageButtonListener(){
+        internalStorageButton = (Button)findViewById(R.id.button_internalStorage);
+        internalStorageButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.example.myapplication1.InternalStorageActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void addDbButtonListener(){
+        dbButton = (Button)findViewById(R.id.button_db);
+        dbButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.example.myapplication1.DbActivity");
                         startActivity(intent);
                     }
                 }

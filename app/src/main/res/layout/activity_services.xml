@@ -22,40 +22,6 @@
         android:layout_alignStart="@+id/button_startService"
         android:layout_alignEnd="@+id/button_startService" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="just to show that you can write while the service is running"
-        android:ems="10"
-        android:layout_marginTop="30dp"
-        android:id="@+id/editText"
-        android:textSize="12sp"
-        android:layout_below="@+id/button_stopService"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Start Service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="114dp"
-        android:id="@+id/button_startIntentService"
-        android:layout_alignEnd="@+id/button_stopService"
-        android:layout_alignStart="@+id/button_stopService"
-        android:onClick="myStartIntentService"/>
-
-    <Button
-        android:text="Stop Service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_startIntentService"
-        android:layout_marginTop="16dp"
-        android:id="@+id/button_stopIntentService"
-        android:layout_alignEnd="@+id/button_startIntentService"
-        android:layout_alignStart="@+id/button_stopService"
-        android:onClick="myStopIntentService"/>
-
     <TextView
         android:text="** Services using a 'manually' created thread **"
         android:layout_width="wrap_content"
@@ -76,6 +42,28 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp" />
 
+    <Button
+        android:text="Start Service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/button_startIntentService"
+        android:onClick="myStartIntentService"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/button_stopService" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="just to show that you can write while the service is running"
+        android:ems="10"
+        android:layout_marginTop="9dp"
+        android:id="@+id/editText"
+        android:textSize="12sp"
+        android:layout_below="@+id/button_stopService"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:text="** Services using intentService **"
         android:layout_width="wrap_content"
@@ -83,8 +71,48 @@
         android:id="@+id/textView4"
         android:textStyle="normal|bold"
         android:textColor="@color/colorPrimary"
-        android:layout_above="@+id/button_stopIntentService"
+        android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp" />
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:text="** Bound Service **"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_stopIntentService"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:id="@+id/textView2"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="Get Random Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:id="@+id/button_randomNumber"
+        android:textSize="12sp"
+        android:onClick="getRandomNumber"/>
+
+    <Button
+        android:text="Stop Service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_stopIntentService"
+        android:onClick="myStopIntentService"
+        android:layout_below="@+id/button_startIntentService"
+        android:layout_alignStart="@+id/button_startIntentService"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView_randomNumber" />
 
 </RelativeLayout>
