@@ -64,8 +64,13 @@ public class DataBaseHelper extends SQLiteOpenHelper{
         contentValues.put(COL_2,name);
         contentValues.put(COL_3,surname);
         contentValues.put(COL_4,marks);
-        long result = db.update(TABLE_NAME,contentValues,"id = ?", new String[]{id});
+        long result = db.update(TABLE_NAME,contentValues,"id = ?", new String[]{id}); //the '?' from the 3rd argument is being replaced with the fourth (array) argument
         return true;
+    }
 
+    public Integer deleteData (String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        int rowsAffected = db.delete(TABLE_NAME,"id = ?", new String[]{id}); //the '?' from the 2nd argument is being replaced with the third (array) argument
+        return rowsAffected;
     }
 }

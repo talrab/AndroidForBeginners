@@ -110,4 +110,12 @@
         android:layout_alignBottom="@+id/editText_id"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:text="Delete data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_delete"
+        android:layout_below="@+id/button_update"
+        android:layout_alignEnd="@+id/button_update" />
+
 </RelativeLayout>

@@ -16,6 +16,7 @@ public class DbActivity extends AppCompatActivity {
     Button addDataButton;
     Button viewAllButton;
     Button updateButton;
+    Button deleteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +32,12 @@ public class DbActivity extends AppCompatActivity {
         viewAllButton = (Button)findViewById(R.id.button_viewAll);
         updateButton = (Button)findViewById(R.id.button_update);
         editId = (EditText)findViewById(R.id.editText_id);
+        deleteButton = (Button)findViewById(R.id.button_delete);
 
         addData();
         viewAll();
         updateData();
+        deleteData();
 
     }
 
@@ -95,6 +98,23 @@ public class DbActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),"Data Not Updated",Toast.LENGTH_LONG).show();
                         }
 
+                    }
+                }
+        );
+    }
+
+    public void deleteData(){
+        deleteButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Integer deletedRows = myDb.deleteData(editId.getText().toString());
+                        if(deletedRows > 0){
+                            Toast.makeText(getApplicationContext(),"Data Deleted",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(),"Data Not Deleted",Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
         );
