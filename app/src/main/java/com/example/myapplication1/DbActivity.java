@@ -12,9 +12,10 @@ import android.widget.Toast;
 public class DbActivity extends AppCompatActivity {
 
     DataBaseHelper myDb;
-    EditText editName, editSurname, editMarks;
+    EditText editName, editSurname, editMarks, editId;
     Button addDataButton;
     Button viewAllButton;
+    Button updateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +29,13 @@ public class DbActivity extends AppCompatActivity {
         editMarks = (EditText)findViewById(R.id.editText_marks);
         addDataButton = (Button)findViewById(R.id.button_addData);
         viewAllButton = (Button)findViewById(R.id.button_viewAll);
+        updateButton = (Button)findViewById(R.id.button_update);
+        editId = (EditText)findViewById(R.id.editText_id);
 
         addData();
         viewAll();
-        
+        updateData();
+
     }
 
     public void addData(){
@@ -58,7 +62,7 @@ public class DbActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Cursor res = myDb.getAllData();
+                        Cursor res = myDb.getAllData();      //Cursor: gives random read-write access to the result set returned by a database query.
                         if(res.getCount() == 0){
                             showMessage("Error", "No Data Found");
                             return;
@@ -71,9 +75,26 @@ public class DbActivity extends AppCompatActivity {
                                 buffer.append("Surname :" + res.getString(2) + "\n");
                                 buffer.append("Marks :" + res.getString(3) + "\n\n");
                             }
-
                             showMessage("Data", buffer.toString());
                         }
+                    }
+                }
+        );
+    }
+
+    public void updateData(){
+        updateButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isUpdated = myDb.updateDate(editId.getText().toString(),editName.getText().toString(),editSurname.getText().toString(),editMarks.getText().toString());
+                        if (isUpdated){
+                            Toast.makeText(getApplicationContext(),"Data Updated",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(),"Data Not Updated",Toast.LENGTH_LONG).show();
+                        }
+
                     }
                 }
         );
